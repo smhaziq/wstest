@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+
+# local folders
+/.vs
+/build
+/out/build/x64-Debug
