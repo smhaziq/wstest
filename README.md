@@ -28,7 +28,7 @@ A simple tool for testing WebSocket connections.
    ```
 4. **Configure the project using CMake**:
    ```bash
-   cmake -GNinja ..
+   cmake -GNinja -DCMAKE_BUILD_TYPE=Release ..
    ```
    if it failed with error:
    
@@ -36,14 +36,14 @@ A simple tool for testing WebSocket connections.
    
    pass Qt6 path as recommended. e.g.
    ```bash
-   cmake -DQt6_DIR=C:\Qt\6.5.7\msvc2019_64\lib\cmake\Qt6 ..
+   cmake -GNinja -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=C:\Qt\6.5.7\msvc2019_64 ..
    ```
 
 5. **Build the project**:
    ```bash
    ninja
    ```
-6. **Run the program**: After building, the executable wstest will be available in the build Debug directory. You can run it with the following command:
+6. **Run the program**: After building, the executable wstest will be available in the build directory. After placing all required Qt's runtime dependencies in same directory, you can run it with the following command:
    ```bash
    ./wstest -s <server_url> -n <num_connections> [--ignore-ssl-errors]
    ```

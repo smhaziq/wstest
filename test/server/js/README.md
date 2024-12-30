@@ -5,12 +5,7 @@
     npm i
     ```
 
-3. Build
+3. Run server
     ```bash
-    npm run build
-    ```
-
-4. Run server
-    ```bash
-    node server.min.js
+    node server.js
     ```
